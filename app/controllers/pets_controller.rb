@@ -34,6 +34,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
+    binding
     @pet = Pet.find(params[:id])
 
 
