@@ -40,7 +40,7 @@ class OwnersController < ApplicationController
   get '/owners/:id' do
     @owner = Owner.find(params[:id])
     erb :'/owners/show'
-  end 
+  end
 
   post '/owners' do
     @owner = Owner.create(params[:owner])
@@ -67,6 +67,6 @@ class OwnersController < ApplicationController
     end
     redirect "owners/#{@owner.id}"
 
->>>>>>> ff9d8949ceeb6070a526f90d3afed79ec7b0b7ea
+
   end
 end
