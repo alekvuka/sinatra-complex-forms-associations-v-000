@@ -37,7 +37,8 @@ class PetsController < ApplicationController
     binding.pry
     @pet = Pet.find(params[:id])
     @pet.name = params[:pet][:name]
-    
+    if params[:pet][:owner_id] == nil
+      
 
 
     redirect to "pets/#{@pet.id}"
