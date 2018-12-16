@@ -38,6 +38,9 @@ class PetsController < ApplicationController
     @pet = Pet.find(params[:id])
     @pet.name = params[:pet][:name]
     if params[:pet][:owner_id] == nil
+      @pet.owner = Owner.create(name: params[:owner][:name])
+    else
+      @pet.owner = Owner.find(params[:pet][:owner_id])
 
 
     end
